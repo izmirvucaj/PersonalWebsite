@@ -38,14 +38,21 @@ button {
 
 /************ Navbar Css ************/
 
-/************ Banner Css ************/
+/************ Banner Css – refreshed ************/
 .banner {
   margin-top: 0;
-  padding: 300px 0 100px 0;
-  background-image: url('../../assets/images/FreeVector.jpg');
+  padding: 240px 0 100px 0;
+  background-color: #0a0e27;
+  background-image: linear-gradient(180deg, rgba(10, 14, 39, 0.4) 0%, rgba(10, 14, 39, 0.6) 100%),
+    url('../../assets/images/FreeVector.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .content {
@@ -53,12 +60,13 @@ button {
   text-align: center; /* Resmi metinlerin yanında ortalamak için */
 }
 
-.content img {
-  width: 400px; /* İstediğiniz genişlik */
-  height: 400px; /* İstediğiniz yükseklik */
-  border-radius: 50%; /* Yuvarlak yapmak için */
+.content img,
+.banner-profile-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-right: 150px; /* Resmi container içinde tamamen kaplamak için */
+  margin-right: 150px;
   margin-bottom: 20px;
 }
 
@@ -66,54 +74,78 @@ button {
 .banner .tagline {
   margin-left: 20px;
   color: white;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(to right,#011842, #002e7d, #7d45ff, #1e47ff); /* Tüm arka planı kaplayacak şekilde renk geçişi */
-
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px; 
-  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(79, 70, 229, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 24px;
   display: inline-block;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
 }
+
 .banner h1 {
   margin-left: 20px;
-  color:white;
+  color: white;
   font-size: 45px;
   font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   margin-bottom: 20px;
   display: block;
 }
+
+.banner h1 .txt-rotate .wrap {
+  color: #a5b4fc;
+}
+
 .banner p {
   margin-left: 20px;
-  color: #b6b1b1;
+  color: rgba(255, 255, 255, 0.82);
   font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
+  letter-spacing: 0.01em;
+  line-height: 1.6em;
   width: 70%;
 }
-.banner button {
-  padding: 8px 10px;
-  margin-left: 20px;
 
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-}
-.banner button svg {
-  font-size: 25px;
-  margin-left: 10px;
-  transition: 0.3s ease-in-out;
-  line-height: 1;
-}
-.banner button:hover svg {
+.banner button {
+  padding: 12px 24px;
   margin-left: 20px;
+  margin-top: 48px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.banner button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.banner button svg {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.banner button:hover svg {
+  transform: translateX(4px);
+}
+
+.banner .row {
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
 }
 
 @keyframes updown {
@@ -129,6 +161,106 @@ button {
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+
+/************ Responsive - Tablet ************/
+@media only screen and (max-width: 991px) {
+  .banner {
+    padding: 150px 24px 80px 24px;
+    min-height: 100vh;
+  }
+
+  .content img {
+    width: 280px;
+    height: 280px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .banner h1 {
+    font-size: 38px;
+  }
+
+  .banner p {
+    width: 90%;
+  }
+}
+
+/************ Responsive - Phone (same feel as desktop: left-aligned text, text then image) ************/
+@media only screen and (max-width: 767px) {
+  .banner {
+    padding: 85px 20px 60px 20px;
+    min-height: 100vh;
+    text-align: left;
+  }
+
+  .banner .tagline {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+
+  .banner h1 {
+    font-size: 32px;
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .banner p {
+    margin-left: 20px;
+    width: 100%;
+    font-size: 17px;
+    text-align: left;
+    line-height: 1.5em;
+  }
+
+  .banner button {
+    margin-left: 20px;
+    margin-top: 40px;
+    justify-content: flex-start;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .content img {
+    width: 260px;
+    height: 260px;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner {
+    padding: 75px 16px 50px 16px;
+    min-height: 100vh;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+    margin-left: 16px;
+  }
+
+  .banner .tagline {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .banner p {
+    margin-left: 16px;
+  }
+
+  .banner button {
+    margin-left: 16px;
+  }
+
+  .content img {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 /************ Skills Css ************/

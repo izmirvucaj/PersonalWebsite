@@ -46,7 +46,7 @@ function AppContact() {
             onFinishFailed={onFinishFailed}
           >
             <Row gutter={[16, 16]}>
-              <Col span={12}>
+              <Col xs={24} sm={12}>
                 <Form.Item
                   name="fullname"
                   rules={[{ required: true, message: 'Please enter your full name!' }]}
@@ -54,7 +54,7 @@ function AppContact() {
                   <Input placeholder="Full Name" />
                 </Form.Item>
               </Col>
-              <Col span={12}>
+              <Col xs={24} sm={12}>
                 <Form.Item
                   name="email"
                   rules={[
@@ -73,14 +73,14 @@ function AppContact() {
               </Col>
             </Row>
             <Row gutter={[16, 16]}>
-              <Col span={12}>
+              <Col xs={24} sm={12}>
                 <Form.Item
                   name="telephone"
                 >
                   <Input placeholder="Telephone" />
                 </Form.Item>
               </Col>
-              <Col span={12}>
+              <Col xs={24} sm={12}>
                 <Form.Item
                   name="subject"
                 >

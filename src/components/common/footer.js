@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { BackTop } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
 
 const AppFooter = () => {
   const [showBackTop, setShowBackTop] = useState(false);
@@ -25,8 +24,7 @@ const AppFooter = () => {
     <div id="footer" className="container-fluid">
       <div className="footer">
         <div className="logo">
-        <i class="fa-solid fa-code"></i> IZMIR
-       
+          <i className="fa-solid fa-code"></i> IZMIR
         </div>
         <ul className="socials">
           <li><a href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a></li>
@@ -35,9 +33,9 @@ const AppFooter = () => {
           <li><a href="https://www.pinterest.com/"><i className="fab fa-pinterest-p"></i></a></li>
           <li><a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a></li>
         </ul>
-        <div className="copyright"> &copy; Copyright  2024 Izmir</div>
+        <div className="copyright"> &copy; Copyright 2025 Izmir</div>
         <BackTop className={showBackTop ? '' : 'hide'}>
-          <div className="ant-back-top-inner"><i class="fa-solid fa-chevron-up"></i></div>
+          <div className="ant-back-top-inner"><i className="fa-solid fa-chevron-up"></i></div>
         </BackTop>
       </div>
     </div>

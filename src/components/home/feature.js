@@ -32,7 +32,7 @@ function AppFeature() {
             <div className="container-skills">
                 <Row gutter={[34, 50]}>
                     {features.map((feature, index) => (
-                        <Col key={index} span={8}>
+                        <Col key={index} xs={24} sm={12} md={8}>
                             <Card
                                 hoverable
                                 bordered
