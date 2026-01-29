@@ -64,7 +64,7 @@ export const Banner = () => {
                                 I am a Computer Engineering graduate from Trakya University in Turkey. I am a responsible and well-organized individual with a strong commitment to continuous self-improvement. I have a strong passion for technology and closely follow the latest developments in the field. I am eager to begin my professional career and gain hands-on experience through my first full-time role.
                                 </p>
                                 <button type="button" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                                  İletişime Geç
+                                  Get in touch
                                   <ArrowRightCircle size={20} />
                                 </button>
                             </div>}
