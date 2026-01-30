@@ -69,6 +69,7 @@ export const Banner = () => {
                                 </button>
                             </div>}
                     </TrackVisibility>
+                
                 </Col>
                 {/* Resim bölümü */}
                 <Col xs={12} md={6} xl={5}>
