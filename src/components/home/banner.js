@@ -59,7 +59,7 @@ export const Banner = () => {
                         {({ isVisible }) =>
                             <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                 <span className="tagline">Welcome to my Portfolio</span>
-                                <h1>{`Hi! I'm Izmir`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                                <h1>{`Hi! I'm Izmir`} <span className="txt-rotate" dataPeriod="1000" data-rotate={['Web Developer', 'Web Designer', 'UI/UX Designer']}><span className="wrap">{text}</span></span></h1>
                                 <p> 
                                 I am a Computer Engineering graduate from Trakya University in Turkey. I am a responsible and well-organized individual with a strong commitment to continuous self-improvement. I have a strong passion for technology and closely follow the latest developments in the field. I am eager to begin my professional career and gain hands-on experience through my first full-time role.
                                 </p>
