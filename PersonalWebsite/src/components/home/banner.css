@@ -1,0 +1,136 @@
+
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+
+
+
+/************ Navbar Css ************/
+
+/************ Banner Css ************/
+.banner {
+  margin-top: 0;
+  padding: 300px 0 100px 0;
+  background-image: url('../../assets/images/FreeVector.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  flex: 1; /* Metinlerin yanında resmin genişlemesini sağlar */
+  text-align: center; /* Resmi metinlerin yanında ortalamak için */
+}
+
+.content img {
+  width: 400px; /* İstediğiniz genişlik */
+  height: 400px; /* İstediğiniz yükseklik */
+  border-radius: 50%; /* Yuvarlak yapmak için */
+  object-fit: cover;
+  margin-right: 150px; /* Resmi container içinde tamamen kaplamak için */
+  margin-bottom: 20px;
+}
+
+
+.banner .tagline {
+  margin-left: 20px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(to right,#011842, #002e7d, #7d45ff, #1e47ff); /* Tüm arka planı kaplayacak şekilde renk geçişi */
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px; 
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.banner h1 {
+  margin-left: 20px;
+  color:white;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner p {
+  margin-left: 20px;
+  color: #b6b1b1;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 70%;
+}
+.banner button {
+  padding: 8px 10px;
+  margin-left: 20px;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner button:hover svg {
+  margin-left: 20px;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+/************ Skills Css ************/
+
+/************ Projects Css ************/

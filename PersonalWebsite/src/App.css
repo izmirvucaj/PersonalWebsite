@@ -1,0 +1,509 @@
+/* 
+general 
+-------
+*/
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.block.featureBlock.bgGray{
+  background: linear-gradient(to right,#011842, #002e7d, #7034fd, #1e47ff); /* Arka plan rengini burada ayarlayabilirsiniz */
+  padding: 50px 0;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.ant-layout {
+  background: #fff !important;
+}
+
+.mainLayout .ant-layout-header {
+  margin-top: 0;
+  background-image: url('assets/images/FreeVector.jpg');
+  background-position: top center;
+  background-size: cover;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container-skills {
+  background-color: rgb(36, 36, 138);
+  display: flex;
+  border-radius: 17%;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  width: 1250px;
+  padding: 130px;
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* App.css */
+.ant-card-hoverable:hover {
+  background-color: rgba(8, 170, 16, 0.1); /* Hover sırasında değişecek arka plan rengi */
+}
+
+/* Card(feature)*/
+/* App.css */
+.card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş süresi ve türü */
+  
+}
+
+.card-hover-effect:hover {
+  transform: scale(1.1); /* Hover sırasında kartın büyümesi */
+  box-shadow: 0 12px 24px rgba(224, 8, 155, 0.3); /* Hover sırasında gölge efekti */
+}
+
+
+.bgGray {
+  background: #fafafa;
+  height: 100vh;
+}
+
+/* 
+title holder
+------------
+*/
+.titleHolder {
+  color: whitesmoke;
+  text-align: center;
+  position: relative;
+  padding: 0 0 20px;
+  margin: 0 0 40px;
+}
+
+.titleHolder:after {
+  transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 50px;
+}
+
+.titleHolder h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* 
+header
+------ 
+*/
+.ant-layout-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 850px;
+}
+
+
+.header .ant-anchor-wrapper {
+  background: none;
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .ant-anchor {
+  display: flex;
+}
+.header .ant-anchor-link {
+  padding: 0 20px;
+  line-height: 1.2;
+  position: relative;
+}
+
+
+
+/* 
+hero
+---- 
+*/
+.heroBlock {
+  background:#67C6E3;
+  background-position: 50% 100%;
+  background-size:cover;
+  height: 100vh;
+  justify-content:center;
+  align-items: center;
+  
+}
+
+.heroBlock .container-fluid {
+  display: block !important;
+ 
+}
+
+.heroBlock .ant-carousel,
+.heroBlock .ant-carousel div {
+  height: 100%;
+}
+
+.heroBlock .slick-dots li button {
+  background: #000 !important;
+}
+
+.heroBlock .slick-dots li.slick-active button {
+  background: #1890ff !important;
+}
+
+.heroBlock .content {
+  max-width: 600px;
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left; /* Yatayda ortala */
+  color: #fff;
+  text-align: left; /* Metni ortala */
+  
+}
+
+/* Fotoğraf Alanı */
+/* Fotoğraf Alanı */
+.image-content {
+  display: flex;
+  justify-content: center; /* Merkezde hizalama */
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+}
+
+.image-content img {
+  width: 95%; /* Varsayılan genişlik */
+  height: 50%; /* Varsayılan yükseklik */
+  max-width: none;
+  max-height: none;
+  object-fit: contain; /* İmajın bozulmadan sığmasını sağlar */
+}
+
+.image-content img.dice {
+  
+  width: 90%;
+  height: 55%;
+  
+}
+
+
+
+
+.heroBlock h3 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 30px;
+  
+}
+
+.heroBlock p {
+  
+  margin: 0 0 30px;
+}
+
+.heroBlock .btnHolder {
+  height: auto !important;
+  color: #4a52bd;
+}
+
+.heroBlock .btnHolder button,
+.heroBlock .btnHolder .fas {
+  margin: 0 10px 0 0;
+  
+}
+
+
+
+/* 
+block
+----- 
+*/
+.block {
+  padding: 60px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* 
+about
+----- 
+*/
+.aboutBlock .contentHolder {
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.aboutBlock .icon {
+  font-size: 40px;
+  color: #1890ff;
+  margin: 0 0 10px;
+}
+
+.aboutBlock .content {
+  text-align: center;
+}
+
+/* 
+
+
+
+
+/* 
+contact
+-------
+*/
+.contactBlock .ant-form {
+  max-width: 640px;
+  margin: auto;
+}
+
+.contactBlock .ant-form textarea {
+  min-height: 120px;
+  height: 120px;
+}
+/* app.css dosyasında contact-container sınıfını tanımlıyoruz */
+.contact-container {
+  background-color: blue; /* İstediğiniz arka plan rengini buraya yazabilirsiniz */
+}
+
+/* Text alanı için stil tanımlaması */
+.custom-textarea {
+  width: 100%; /* TextArea bileşeninin genişliğini ayarlar */
+  resize: vertical; /* Dikey yeniden boyutlandırmayı etkinleştirir */
+  /* Diğer stillendirme kodları... */
+}
+
+/* 
+footer
+------
+*/
+.ant-layout-footer {
+  background: #111 !important;
+  color: #fff !important;
+  padding: 30px 0  !important;
+  text-align: center;
+}
+
+
+.footer .logo {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.footer .fas {
+  color: #1890ff;
+  font-size: 28px;
+  margin: 0 5px 0 0;
+}
+
+.footer .logo a {
+  color: #fff;
+}
+
+.footer .socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 24px;
+}
+.footer .copyright {
+  margin-top: 20px; /* Copyright yazısı ve üstteki öğeler arasındaki boşluk */
+  font-size: 14px;
+  color: #fff;
+}
+
+
+.footer .socials li {
+  margin: 0 20px;
+}
+
+.footer .socials a {
+  color: #fff;
+}
+
+.footer .socials a:hover {
+  color: #1890ff;
+}
+
+.footer .goTop:hover {
+  opacity: 0.7;
+}
+
+.mobileVisible {
+  display: none;
+}
+
+.mobileHidden {
+  display: block;
+}
+
+/* 
+responsive
+----------
+*/
+@media only screen and (max-width: 991px) {
+  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
+    transform: scale(1.14);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
+    transform: scale(1);
+  }
+
+  .mobileVisible {
+    display: block;
+  }
+  
+  .mobileHidden {
+    display: none;
+  }
+}
+
+/* 
+up
+*/
+/* AppFooter.css */
+
+
+
+/* Icon styles */
+/* Icon styles */
+.icon-container {
+  display: flex;
+  margin-top: -3%;
+  justify-content: flex-end;
+}
+
+.icon-container a {
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px; /* BaÄŸlantÄ± alanÄ±nÄ±n boyutu */
+  height: 40px; /* BaÄŸlantÄ± alanÄ±nÄ±n boyutu */
+  margin-left: 13px;
+  border: 1.5px solid rgb(153, 153, 153); 
+}
+
+
+.icon-container a.linkedin:hover {
+  background-color: #0077B5; /* LinkedIn iÃ§in hover durumunda arka plan rengi */
+}
+
+.icon-container a.github:hover {
+  background-color: #b010d0; /* GitHub iÃ§in hover durumunda arka plan rengi */
+}
+
+/* 
+contact
+-------
+*/
+.contactBlock {
+  min-height: 100vh;
+  background: linear-gradient(to right,#011842, #002e7d, #7d45ff, #1e47ff); /* Tüm arka planı kaplayacak şekilde renk geçişi */
+  background-size: cover;
+}
+
+.contactBlock .ant-form {
+  background: none; /* Formun arka planını temizle */
+  max-width: 640px;
+  margin: auto;
+}
+
+.contactBlock .ant-form textarea {
+  min-height: 120px;
+  height: 120px;
+}
+
+.contentHolder {
+  background: none; /* İçeriğin arka planını temizle */
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  margin-top: 7%;
+  width: 45%; /* Sol bölümün genişliği */
+  margin-right: 5%; /* Sağdaki form ile resim arasında boşluk */
+}
+
+.right {
+  margin-top: 7%;
+  width: 50%; /* Sağ bölümün genişliği */
+  padding: 5px;
+}
+
+.right .titleHolder {
+  margin-bottom: 10px;
+}
+
+.right .contact-form {
+  width: 100%;
+}
+
+img {
+  
+  background: none; /* Resmin arka planını temizle */
+  width: 100%; /* Resmi tam genişlikte yap */
+  height: auto;
+  margin-left: 5px; /* Resmi sola yaklaştırma */
+}
+.ant-back-top-inner {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  border:2 px solid white;
+}
+.ant-back-top{
+  position: fixed;
+  bottom:50px;
+  right:50px;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+.ant-back-top.hide{
+  opacity:0;
+}
+
+
+
+
+
+
+
+
+
