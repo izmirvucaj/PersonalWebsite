@@ -422,6 +422,14 @@ responsive
     min-height: 400px;
     padding: 40px 20px;
     border-radius: 12%;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  .container-skills .ant-row {
+    width: 100%;
+    justify-content: center;
   }
 
   /* Contact: start stacking */
@@ -458,6 +466,11 @@ responsive
     height: auto;
     object-fit: contain;
   }
+
+  .bgGray {
+    min-height: 100vh;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -473,16 +486,40 @@ responsive
     display: none;
   }
 
+  /* Header layer: remove fixed background image bleed, allow auto height */
+  .mainLayout .ant-layout-header {
+    height: auto !important;
+    line-height: 1.4 !important;
+    padding: 0 !important;
+  }
+
   /* Header: compact nav for phone */
   .header {
-    padding: 12px 15px;
+    padding: 12px 14px;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header > div:first-child {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .header .ant-anchor-wrapper {
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    width: 100%;
+    overflow-x: visible;
+  }
+
+  .header .ant-anchor {
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    width: 100%;
   }
 
   .header .ant-anchor-link {
@@ -492,12 +529,14 @@ responsive
 
   .icon-container {
     justify-content: center;
+    margin-top: 0;
   }
 
   .icon-container a {
     width: 36px;
     height: 36px;
-    margin-left: 8px;
+    margin-left: 6px;
+    margin-right: 6px;
   }
 
   /* Layout content padding */
@@ -506,22 +545,82 @@ responsive
   }
 
   /* Skills: single column feel, smaller cards */
+  .featureBlock.bgGray {
+    padding: 40px 0;
+    min-height: auto;
+    height: auto;
+  }
+
   .container-skills {
     width: 100%;
-    padding: 30px 15px;
-    border-radius: 8%;
+    max-width: 100%;
+    padding: 28px 14px;
+    border-radius: 18px;
     min-height: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .container-skills .ant-row {
+    width: 100%;
+    margin: 0 !important;
+    row-gap: 18px !important;
+    justify-content: center;
   }
 
   .container-skills .ant-col {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 6px !important;
   }
 
+  /* Override the inline width/height on feature cards and the absolute-positioned title */
   .container-skills .ant-card {
     width: 100% !important;
-    max-width: 280px;
-    margin: 0 auto 20px;
+    max-width: 160px;
+    height: auto !important;
+    margin: 0 auto;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .container-skills .ant-card-body {
+    padding: 14px 10px !important;
+  }
+
+  .container-skills .ant-card .ant-card-body > div {
+    height: auto !important;
+    position: relative;
+  }
+
+  .container-skills .ant-card img {
+    width: 100% !important;
+    height: 70px !important;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  /* Pull the absolute-positioned title back into normal flow on mobile */
+  .container-skills .ant-card .ant-card-meta,
+  .container-skills .ant-card .ant-card-body > div > div {
+    position: static !important;
+    color: #fff !important;
+    text-align: center;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .container-skills .ant-card-meta-title {
+    color: #fff !important;
+    font-size: 14px !important;
+    text-align: center;
+    margin-bottom: 0 !important;
   }
 
   /* Block padding */
@@ -529,22 +628,50 @@ responsive
     padding: 40px 0;
   }
 
-  /* Hero */
+  /* Hero (Projects) – override inline height: 100vh from hero.js */
   .heroBlock {
-    min-height: 100vh;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 60px 0 70px 0;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .heroBlock .container-fluid {
+    padding: 0 16px;
+  }
+
+  .heroBlock .ant-carousel,
+  .heroBlock .ant-carousel div {
     height: auto;
-    min-height: 80vh;
+  }
+
+  .heroBlock .slick-slide > div {
+    padding: 10px 0 30px;
+  }
+
+  .heroBlock .slick-dots {
+    bottom: -8px !important;
+  }
+
+  .heroBlock .ant-row {
+    row-gap: 20px;
+    padding: 16px 0;
+    flex-direction: column-reverse;
   }
 
   .heroBlock .content {
     max-width: 100%;
     text-align: center;
     align-items: center;
+    padding: 0 6px;
   }
 
   .heroBlock h3 {
-    font-size: 22px;
+    font-size: 19px;
+    line-height: 1.4;
     text-align: center;
+    margin: 0 0 18px;
   }
 
   .heroBlock p {
@@ -552,13 +679,19 @@ responsive
   }
 
   .heroBlock .btnHolder {
+    display: flex;
     justify-content: center;
+    margin-top: 10px;
+  }
+
+  .heroBlock .btnHolder button {
+    margin: 0;
   }
 
   /* Projects section – ensure images are visible on phone */
   .heroBlock .image-content {
-    min-height: 220px;
-    padding: 20px 10px;
+    min-height: 0;
+    padding: 6px 8px 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -568,67 +701,135 @@ responsive
   .heroBlock .image-content img {
     width: 100%;
     max-width: 320px;
-    height: auto;
-    min-height: 180px;
+    height: auto !important;
+    max-height: 220px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
+    border-radius: 12px;
   }
 
   .heroBlock .image-content img.dice {
-    max-width: 280px;
-    min-height: 160px;
+    max-width: 240px;
+    max-height: 220px;
   }
 
   /* Contact */
   .contactBlock {
     min-height: auto;
-    padding: 40px 0;
+    padding: 50px 0;
   }
 
   .contentHolder {
     flex-direction: column;
-    padding: 15px 10px;
+    padding: 0 14px;
+    align-items: stretch;
+    gap: 10px;
   }
 
+  .left,
+  .right {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px !important;
+  }
+
+  /* Force-shrink the contact image (it has hardcoded width=750 attribute in JSX) */
   .left img {
-    max-width: 100%;
-    width: 100%;
-    margin-left: 0;
+    max-width: 260px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
 
   .right {
-    padding: 5px 0;
+    margin-top: 10px !important;
+  }
+
+  .right .titleHolder {
+    margin-bottom: 22px;
   }
 
   .right .titleHolder h2 {
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .right .titleHolder p {
+    text-align: center;
+    font-size: 14px;
   }
 
   .contactBlock .ant-form {
     max-width: 100%;
   }
 
+  .contactBlock .ant-row {
+    row-gap: 8px !important;
+  }
+
+  .contactBlock .ant-form-item {
+    margin-bottom: 12px;
+  }
+
+  .contactBlock .ant-input,
+  .contactBlock .ant-input-affix-wrapper {
+    height: 42px;
+    font-size: 15px;
+  }
+
+  .contactBlock .ant-form textarea {
+    min-height: 110px;
+    font-size: 15px;
+  }
+
+  .contactBlock .login-form-button {
+    width: 100%;
+    height: 44px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .contactBlock .ant-checkbox-wrapper {
+    color: #fff;
+    font-size: 13px;
+  }
+
   /* Footer */
+  .ant-layout-footer {
+    padding: 28px 12px !important;
+  }
+
   .footer .logo {
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .footer .socials {
-    font-size: 20px;
+    font-size: 18px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
+    margin: 0;
   }
 
   .footer .socials li {
-    margin: 0 12px;
+    margin: 0 8px;
+  }
+
+  .footer .socials a {
+    width: 36px;
+    height: 36px;
   }
 
   .footer .copyright {
     font-size: 12px;
-    margin-top: 15px;
+    margin-top: 14px;
     padding: 0 10px;
   }
 
@@ -639,20 +840,24 @@ responsive
   }
 
   .ant-back-top-inner {
-    height: 36px;
-    width: 36px;
-    line-height: 36px;
-    font-size: 16px;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    font-size: 15px;
   }
 
   /* Title holder */
+  .titleHolder {
+    margin: 0 0 24px;
+  }
+
   .titleHolder h2 {
     font-size: 22px;
   }
 
   /* General */
   .bgGray {
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
   }
 }
@@ -663,36 +868,97 @@ responsive
   }
 
   .header {
-    padding: 10px 12px;
+    padding: 10px 10px;
+    gap: 8px;
   }
 
   .header .ant-anchor-link {
-    padding: 0 8px;
+    padding: 0 7px;
     font-size: 13px;
+  }
+
+  .icon-container a {
+    width: 32px;
+    height: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  /* Skills cards on tiny screens */
+  .container-skills {
+    padding: 22px 10px;
+    border-radius: 14px;
+  }
+
+  .container-skills .ant-row {
+    row-gap: 14px !important;
+  }
+
+  .container-skills .ant-col {
+    padding: 4px !important;
   }
 
   .container-skills .ant-card {
     max-width: 100%;
   }
 
-  /* Projects section – images on small phones */
+  .container-skills .ant-card-body {
+    padding: 10px 8px !important;
+  }
+
+  .container-skills .ant-card img {
+    height: 56px !important;
+  }
+
+  .container-skills .ant-card-meta-title {
+    font-size: 13px !important;
+  }
+
+  /* Hero / projects on small phones */
+  .heroBlock {
+    padding: 50px 0 60px 0;
+  }
+
+  .heroBlock h3 {
+    font-size: 17px;
+  }
+
   .heroBlock .image-content {
-    min-height: 200px;
-    padding: 16px 8px;
+    min-height: 0;
+    padding: 4px 6px 12px;
   }
 
   .heroBlock .image-content img {
-    max-width: 280px;
-    min-height: 160px;
+    max-width: 260px;
+    max-height: 190px;
   }
 
   .heroBlock .image-content img.dice {
-    max-width: 240px;
-    min-height: 140px;
+    max-width: 200px;
+    max-height: 190px;
   }
 
+  /* Contact tightening */
+  .contactBlock {
+    padding: 40px 0;
+  }
+
+  .left img {
+    max-width: 220px !important;
+  }
+
+  .right .titleHolder h2 {
+    font-size: 22px;
+  }
+
+  /* Footer */
   .footer .socials li {
-    margin: 0 8px;
+    margin: 0 6px;
+  }
+
+  .footer .socials a {
+    width: 34px;
+    height: 34px;
   }
 
   .ant-back-top {
